@@ -13,6 +13,11 @@ jobs:
         with:
           node-version: 20
       - run: |
+          echo "HEALTH=/health" >> .env
+          echo "LIVE=/live" >> .env
+          echo "METRICS=/metrics" >> .env
+          echo "GRACEFULL=10000" >> .env    
+      - run: |
           cd my-app-local/password-generator-app
           npm install && npm start
       - run: |
