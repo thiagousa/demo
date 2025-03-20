@@ -12,13 +12,13 @@ jobs:
       - uses: actions/setup-node@v4
         with:
           node-version: 20
+    
       - run: |
+          cd my-app-local/password-generator-app
           echo "HEALTH=/health" >> .env
           echo "LIVE=/live" >> .env
           echo "METRICS=/metrics" >> .env
           echo "GRACEFULL=10000" >> .env    
-      - run: |
-          cd my-app-local/password-generator-app
           npm install && npm start
       - run: |
           npm install -g artillery 
