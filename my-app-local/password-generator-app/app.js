@@ -2,6 +2,10 @@
 require('dotenv').config();
 const port = 3000;
 
+const healthRoute = process.env.HEALTH || '/health';
+const liveRoute = process.env.LIVE || '/live';
+const metricsRoute = process.env.METRICS || '/metrics';
+
 const express = require('express');
 const app = express();
 
