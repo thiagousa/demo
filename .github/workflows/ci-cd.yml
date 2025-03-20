@@ -19,7 +19,7 @@ jobs:
           echo "LIVE=/live" >> .env
           echo "METRICS=/metrics" >> .env
           echo "GRACEFULL=10000" >> .env    
-          npm install && npm start
+          npm install
       - run: |
           npm install -g artillery 
           artillery run my-app-local/password-generator-app/loadtest/loadtest.yaml
