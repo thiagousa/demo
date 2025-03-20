@@ -14,8 +14,7 @@ jobs:
           node-version: 20
       - run: |
           cd my-app-local/password-generator-app
-          npm install
-          npm ci && npm start
+          npm install && npm start
       - run: |
           npm install -g artillery 
           artillery run my-app-local/password-generator-app/loadtest/loadtest.yaml
