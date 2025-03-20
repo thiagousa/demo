@@ -14,6 +14,7 @@ jobs:
           node-version: 20
       - run: |
           cd my-app-local/password-generator-app
+          npm install
           npm ci && npm start
       - run: |
           npm install -g artillery 
